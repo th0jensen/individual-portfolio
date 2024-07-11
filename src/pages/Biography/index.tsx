@@ -20,7 +20,7 @@ export default function Biography() {
     return (
         <div
             id='about-me'
-            className='container max-w-xl px-10 text-3xl font-bold text-primary flex flex-col justify-center'
+            className='container h-screen max-w-xl px-10 text-3xl font-bold text-primary flex flex-col justify-center'
         >
             <h1 className='text-4xl font-bold'>hiya!</h1>
             <br />
@@ -33,6 +33,11 @@ export default function Biography() {
                     a {calculateAge()} year old software developer passionate
                     about systems engineering and optimisation.
                 </p>
+            </div>
+            <br />
+            <div className='text-sm'>
+                <p>human languages: english, norwegian, german, hebrew</p>
+                <p>computer languages: typescript, golang, swift, rust</p>
             </div>
         </div>
     )

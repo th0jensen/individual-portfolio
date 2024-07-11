@@ -4,14 +4,15 @@ export default {
     theme: {
         extend: {},
     },
+    // eslint-disable-next-line
     plugins: [require('daisyui')],
     daisyui: {
         themes: [
             {
                 mytheme: {
-                    primary: '#ffffff',
-                    secondary: '#a8a8a8',
-                    accent: '#d7d7d7',
+                    primary: '#f1f2f3',
+                    secondary: '#d3d3d3',
+                    accent: '#a8a8a8',
                     neutral: '#505050',
                     'base-100': '#181818',
                 },

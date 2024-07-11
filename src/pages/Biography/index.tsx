@@ -67,7 +67,7 @@ export default function Biography() {
             <div className='container right-0 flex w-screen justify-end xl:absolute'>
                 <img
                     className='max-w-screen max-h-full xl:max-h-screen xl:max-w-full'
-                    src='https://github.com/th0jensen/individual-portfolio/blob/main/src/assets/thomas_face.png?raw=true'
+                    src='https://github.com/th0jensen/individual-portfolio/blob/main/src/assets/thomas_face_upscaled.png?raw=true'
                     alt='my face'
                 />
             </div>

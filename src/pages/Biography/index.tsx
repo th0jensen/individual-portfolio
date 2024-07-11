@@ -1,3 +1,4 @@
+import { TypeAnimation } from 'react-type-animation'
 import { portfolioData as data } from '../../data'
 
 export default function Biography() {
@@ -22,7 +23,22 @@ export default function Biography() {
             id='about-me'
             className='container h-screen max-w-xl px-10 text-3xl font-bold text-primary flex flex-col justify-center'
         >
-            <h1 className='text-4xl font-bold'>hiya!</h1>
+            <TypeAnimation
+                sequence={[
+                    'hiya!',
+                    3000,
+                    '!שלום',
+                    3000,
+                    'hallo!',
+                    3000,
+                    'hei!',
+                    3000,
+                ]}
+                wrapper='h1'
+                speed={50}
+                className='text-4xl font-bold'
+                repeat={Infinity}
+            />
             <br />
             <div>
                 <p>
@@ -36,8 +52,26 @@ export default function Biography() {
             </div>
             <br />
             <div className='text-sm'>
-                <p>human languages: english, norwegian, german, hebrew</p>
-                <p>computer languages: typescript, golang, swift, rust</p>
+                <p>
+                    human languages:{' '}
+                    {data.about.languages.map((lang, index) => {
+                        if (index < data.about.languages.length - 1) {
+                            return lang.toLowerCase() + ', '
+                        } else {
+                            return lang.toLowerCase()
+                        }
+                    })}
+                </p>
+                <p>
+                    computer languages:{' '}
+                    {data.tech.map((lang, index) => {
+                        if (index < data.tech.length - 1) {
+                            return lang.toLowerCase() + ', '
+                        } else {
+                            return lang.toLowerCase()
+                        }
+                    })}
+                </p>
             </div>
         </div>
     )

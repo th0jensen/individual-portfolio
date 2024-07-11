@@ -1,6 +1,8 @@
 export type Data = {
     about: {
         [key in 'firstName' | 'lastName' | 'birthday']: string
+    } & {
+        languages: string[]
     }
     tech: string[]
     education: {
@@ -18,6 +20,7 @@ export const portfolioData: Data = {
         firstName: 'Thomas',
         lastName: 'Jensen',
         birthday: '10-12-2003',
+        languages: ['english', 'norwegian', 'german', 'hebrew'],
     },
     tech: ['Typescript', 'Javascript', 'HTML & CSS', 'Swift', 'Go', 'Bash'],
     education: {

@@ -2,7 +2,7 @@ import { HashLink as Link } from 'react-router-hash-link'
 
 export default function Header() {
     return (
-        <header className='navbar bg-base-100 fixed top-0 left-0 z-10'>
+        <header className='navbar bg-base-100 shadow-2xl p-4 fixed top-0 left-0 z-10'>
             <div className='navbar-start'>
                 <Link to={'/#'} className='btn btn-ghost text-xl link-primary'>
                     thomas jensen

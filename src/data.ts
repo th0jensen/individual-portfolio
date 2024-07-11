@@ -2,7 +2,7 @@ export type Data = {
     about: {
         [key in 'firstName' | 'lastName' | 'birthday']: string
     } & {
-        languages: string[]
+        [key in 'humanLanguages' | 'computerLanguages']: string[]
     }
     tech: string[]
     education: {
@@ -20,7 +20,8 @@ export const portfolioData: Data = {
         firstName: 'Thomas',
         lastName: 'Jensen',
         birthday: '10-12-2003',
-        languages: ['english', 'norwegian', 'german', 'hebrew'],
+        humanLanguages: ['English', 'Norwegian', 'German', 'Hebrew'],
+        computerLanguages: ['Typescript', 'Go', 'Swift', 'Rust'],
     },
     tech: ['Typescript', 'Javascript', 'HTML & CSS', 'Swift', 'Go', 'Bash'],
     education: {

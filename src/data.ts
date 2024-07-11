@@ -1,4 +1,4 @@
-type Data = {
+export type Data = {
     name: {
         [key in 'first' | 'last' | 'birthday']: string
     }
@@ -13,7 +13,7 @@ type Data = {
     }
 }
 
-const data: Data = {
+const portfolioData: Data = {
     name: {
         first: 'Thomas',
         last: 'Jensen',
@@ -38,4 +38,4 @@ const data: Data = {
     },
 }
 
-export default data
+export default portfolioData

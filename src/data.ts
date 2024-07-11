@@ -1,6 +1,6 @@
 export type Data = {
-    name: {
-        [key in 'first' | 'last' | 'birthday']: string
+    about: {
+        [key in 'firstName' | 'lastName' | 'birthday']: string
     }
     tech: string[]
     education: {
@@ -13,10 +13,10 @@ export type Data = {
     }
 }
 
-const portfolioData: Data = {
-    name: {
-        first: 'Thomas',
-        last: 'Jensen',
+export const portfolioData: Data = {
+    about: {
+        firstName: 'Thomas',
+        lastName: 'Jensen',
         birthday: '10-12-2003',
     },
     tech: ['Typescript', 'Javascript', 'HTML & CSS', 'Swift', 'Go', 'Bash'],
@@ -37,5 +37,3 @@ const portfolioData: Data = {
         ],
     },
 }
-
-export default portfolioData

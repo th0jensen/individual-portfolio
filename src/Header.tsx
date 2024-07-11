@@ -2,27 +2,21 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
     return (
-        <header className='navbar bg-base-300 fixed top-0 left-0'>
+        <header className='navbar bg-base-100 fixed top-0 left-0 z-10'>
             <div className='navbar-start'>
-                <span className='btn btn-ghost text-xl text-primary'>
-                    Thomas Jensen
-                </span>
+                <Link to={'/#'} className='btn btn-ghost text-xl link-primary'>
+                    thomas jensen
+                </Link>
             </div>
             <nav className='navbar-end'>
-                <Link to={'#biography'} className='btn btn-ghost link-primary'>
-                    Biography
+                <Link to={'#edu'} className='btn btn-ghost link-primary'>
+                    edu
                 </Link>
-                <Link to={'#education'} className='btn btn-ghost link-primary'>
-                    Education
+                <Link to={'#proj'} className='btn btn-ghost link-primary'>
+                    proj
                 </Link>
-                <Link to={'#projects'} className='btn btn-ghost link-primary'>
-                    Projects
-                </Link>
-                <Link
-                    to={'#technologies'}
-                    className='btn btn-ghost link-primary'
-                >
-                    Technologies
+                <Link to={'#tech'} className='btn btn-ghost link-primary'>
+                    tech
                 </Link>
             </nav>
         </header>

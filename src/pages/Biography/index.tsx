@@ -20,12 +20,12 @@ export default function Biography() {
     return (
         <div
             id='about-me'
-            className='container mx-auto px-4 text-3xl font-bold text-primary flex flex-col justify-center'
+            className='container max-w-xl px-10 text-3xl font-bold text-primary flex flex-col justify-center'
         >
             <h1 className='text-4xl font-bold'>hiya!</h1>
             <br />
             <div>
-                <p className=''>
+                <p>
                     im{' '}
                     <span className='bg-black text-white px-4 py-1'>
                         {data.about.firstName} {data.about.lastName}

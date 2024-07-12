@@ -3,10 +3,10 @@ import Biography from './pages/Biography'
 import Education from './pages/Education'
 import Projects from './pages/Projects'
 import Stack from './pages/Stack'
-import Footer from './Footer'
+// import Footer from './Footer'
 import { useState, useEffect } from 'react'
 
-function App() {
+export default function App() {
     const [onScroll, setOnScroll] = useState<boolean>(false)
 
     useEffect(() => {
@@ -18,15 +18,16 @@ function App() {
     }, [onScroll])
 
     return (
-        <div>
+        <div className='h-screen snap-y snap-mandatory'>
             <Header onScroll={onScroll} />
             <Biography />
+            <br />
             <Education />
+            <br />
             <Projects />
+            <br />
             <Stack />
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }
-
-export default App

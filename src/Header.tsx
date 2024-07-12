@@ -14,7 +14,11 @@ export default function Header({ onScroll }: HeaderProps) {
 
     return (
         <header
-            className={`navbar backdrop-blur-lg ${onScroll ? 'shadow-2xl' : ''} fixed z-50 w-full p-4`}
+            className={`navbar fixed z-50 w-full p-4 backdrop-blur-2xl`}
+            style={{
+                boxShadow:
+                    'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px',
+            }}
         >
             <div className='navbar-start flex w-full items-center justify-between xl:w-auto'>
                 <Link to={'/#'} className='btn btn-ghost link-primary text-xl'>

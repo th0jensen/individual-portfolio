@@ -32,7 +32,7 @@ export default function SocialButton({ social, link }: SocialButtonProps) {
 
     return (
         <button className='btn btn-ghost px-0' onClick={() => handleClick()}>
-            <Icon className='text-primary m-0 size-12 p-0' />
+            <Icon className='text-primary m-0 size-12 p-0 transition ease-in-out hover:scale-125' />
         </button>
     )
 }

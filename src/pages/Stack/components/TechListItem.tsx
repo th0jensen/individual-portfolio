@@ -63,5 +63,7 @@ export default function TechListItem(props: { lang: string }) {
             break
     }
 
-    return <Icon className='text-primary m-0 size-12 p-0' />
+    return (
+        <Icon className='text-primary m-0 size-12 p-0 transition ease-in-out hover:scale-125' />
+    )
 }

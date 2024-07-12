@@ -4,7 +4,9 @@ export type Data = {
     } & {
         [key in 'humanLanguages' | 'computerLanguages']: string[]
     }
-    tech: string[]
+    tech: {
+        [key: string]: string[]
+    }
     education: {
         time: {
             [key in 'from' | 'to']: number
@@ -23,7 +25,25 @@ export const portfolioData: Data = {
         humanLanguages: ['English', 'Norwegian', 'German', 'Hebrew'],
         computerLanguages: ['Typescript', 'Go', 'Swift', 'Rust'],
     },
-    tech: ['Typescript', 'Javascript', 'HTML & CSS', 'Swift', 'Go', 'Bash'],
+    tech: {
+        languages: [
+            'Typescript',
+            'Javascript',
+            'HTML',
+            'CSS',
+            'Go',
+            'Swift',
+            'Rust',
+        ],
+        technologies: [
+            'React.js',
+            'Express',
+            'Node.js',
+            'PostgreSQL',
+            'TailwindCSS',
+            'Linux',
+        ],
+    },
     education: {
         time: {
             from: 2020,

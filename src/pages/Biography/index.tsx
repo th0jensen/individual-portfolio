@@ -1,6 +1,7 @@
 import { TypeAnimation } from 'react-type-animation'
 import { portfolioData as data } from '../../data'
 import LangList from './components/LangList'
+import SocialButton from './components/SocialButton'
 
 export default function Biography() {
     const sequence = [
@@ -34,7 +35,7 @@ export default function Biography() {
         <div className='flex h-screen w-screen flex-col'>
             <img
                 className='absolute left-0 top-0 z-0 h-screen'
-                src='/src/assets/topo_map.png'
+                src='https://github.com/th0jensen/individual-portfolio/blob/main/src/assets/topo_map.png?raw=true'
             />
             <div
                 id='about-me'
@@ -67,14 +68,28 @@ export default function Biography() {
                         data={data.about.computerLanguages}
                     />
                 </div>
+                <div className='flex gap-4'>
+                    <SocialButton
+                        social='github'
+                        link={'https://www.github.com/th0jensen'}
+                    />
+                    <SocialButton
+                        social='linkedin'
+                        link={
+                            'https://www.linkedin.com/in/thomas-jensen-75a488208/'
+                        }
+                    />
+                    <SocialButton
+                        social='instagram'
+                        link={'https://www.instagram.com/baecien'}
+                    />
+                </div>
             </div>
-            <div className='container bottom-0 right-0 z-10 flex w-screen justify-end xl:absolute'>
-                <img
-                    className='max-h-full max-w-xl xl:max-h-screen xl:max-w-full'
-                    src='https://github.com/th0jensen/individual-portfolio/blob/main/src/assets/thomas_face_upscaled.png?raw=true'
-                    alt='my face'
-                />
-            </div>
+            <img
+                className='absolute bottom-0 right-0 max-h-full max-w-xl xl:max-h-screen xl:max-w-full'
+                src='https://github.com/th0jensen/individual-portfolio/blob/main/src/assets/thomas_face_upscaled.png?raw=true'
+                alt='my face'
+            />
         </div>
     )
 }

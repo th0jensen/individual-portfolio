@@ -32,9 +32,13 @@ export default function Biography() {
 
     return (
         <div className='flex h-screen w-screen flex-col'>
+            <img
+                className='absolute left-0 top-0 z-0 h-screen'
+                src='/src/assets/topo_map.png'
+            />
             <div
                 id='about-me'
-                className='text-primary container flex h-screen max-w-xl flex-col justify-center gap-10 px-10 text-3xl font-bold'
+                className='text-primary container z-10 flex h-screen max-w-xl flex-col justify-center gap-10 px-10 pt-24 text-3xl font-bold'
             >
                 <TypeAnimation
                     sequence={sequence}
@@ -43,7 +47,7 @@ export default function Biography() {
                     className='text-4xl font-bold'
                     repeat={Infinity}
                 />
-                <div>
+                <div className=''>
                     <p>
                         i am{' '}
                         <span className='bg-black px-4 py-1 text-white'>
@@ -64,9 +68,9 @@ export default function Biography() {
                     />
                 </div>
             </div>
-            <div className='container right-0 flex w-screen justify-end xl:absolute'>
+            <div className='container bottom-0 right-0 z-10 flex w-screen justify-end xl:absolute'>
                 <img
-                    className='max-w-screen max-h-full xl:max-h-screen xl:max-w-full'
+                    className='max-h-full max-w-xl xl:max-h-screen xl:max-w-full'
                     src='https://github.com/th0jensen/individual-portfolio/blob/main/src/assets/thomas_face_upscaled.png?raw=true'
                     alt='my face'
                 />

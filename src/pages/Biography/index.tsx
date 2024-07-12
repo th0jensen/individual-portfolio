@@ -36,7 +36,7 @@ export default function Biography() {
             <img
                 className='fixed left-0 top-0 z-0 h-screen w-screen'
                 src={
-                    'https://images.unsplash.com/photo-1654521957182-f0277b65005a?q=80&w=3358&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                    'https://images.unsplash.com/photo-1662473991701-c69c3b6bf6fb?q=80&w=3293&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
                 }
             />
             <div
@@ -44,7 +44,7 @@ export default function Biography() {
                 className='text-primary container z-10 flex h-screen max-w-xl flex-col justify-center gap-10 px-10 pt-24 text-3xl font-bold'
             >
                 <div
-                    className='z-10 flex max-w-xl flex-col gap-10 rounded-2xl p-10 backdrop-blur-2xl'
+                    className='z-20 flex max-w-xl flex-col gap-10 rounded-2xl p-10 backdrop-blur-2xl'
                     style={{
                         boxShadow:
                             'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px',
@@ -78,7 +78,16 @@ export default function Biography() {
                             data={data.about.computerLanguages}
                         />
                     </div>
-                    <div className='flex gap-4'>
+                </div>
+                <div
+                    className='col z-20 flex max-w-xl flex-col gap-5 rounded-2xl p-10 backdrop-blur-2xl'
+                    style={{
+                        boxShadow:
+                            'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px',
+                    }}
+                >
+                    <h1 className='flex-row text-4xl font-bold'>socials</h1>
+                    <div className='flex gap-5'>
                         <SocialButton
                             social='github'
                             link={'https://www.github.com/th0jensen'}

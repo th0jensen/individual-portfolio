@@ -11,8 +11,16 @@ export default function Education() {
                 }
                 alt=''
             /> */}
-            <h1 className='text-4xl font-bold'>education/experience</h1>
-            <span>work in progress</span>
+            <div
+                className='z-20 flex max-w-xl flex-col gap-10 rounded-2xl p-10 backdrop-blur-2xl'
+                style={{
+                    boxShadow:
+                        'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px',
+                }}
+            >
+                <h1 className='text-4xl font-bold'>education/experience</h1>
+                <span>work in progress</span>
+            </div>
         </div>
     )
 }

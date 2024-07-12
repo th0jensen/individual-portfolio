@@ -34,8 +34,10 @@ export default function Biography() {
     return (
         <div className='flex h-screen w-screen flex-col'>
             <img
-                className='absolute left-0 top-0 z-0 h-screen'
-                src='https://github.com/th0jensen/individual-portfolio/blob/main/src/assets/topo_map.png?raw=true'
+                className='absolute left-0 top-0 z-0 h-screen w-screen'
+                src={
+                    'https://images.unsplash.com/photo-1658937364065-60f3f6818724?q=80&w=3293&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                }
             />
             <div
                 id='about-me'

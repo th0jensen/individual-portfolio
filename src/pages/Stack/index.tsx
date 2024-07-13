@@ -22,7 +22,7 @@ export default function Stack() {
                 }}
             >
                 <h1 className='text-4xl font-bold'>tech stack</h1>
-                <div>
+                <div className='flex flex-col'>
                     <TechList data={data.tech.languages} />
                     <TechList data={data.tech.technologies} />
                 </div>

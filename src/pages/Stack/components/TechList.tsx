@@ -8,14 +8,13 @@ export default function TechList(props: { data: string[] }) {
     else title = 'technologies'
 
     return (
-        <div className='flex flex-col gap-5'>
+        <div className='flex flex-col gap-5 py-10'>
             <p className='text-2xl'>{title}</p>
-            <div className='flex gap-5'>
+            <div className='flex flex-wrap gap-5'>
                 {props.data.map((lang, index) => (
                     <TechListItem key={index} lang={lang} />
                 ))}
             </div>
-            <br />
         </div>
     )
 }

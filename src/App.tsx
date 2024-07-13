@@ -3,7 +3,7 @@ import Biography from './pages/Biography'
 import Education from './pages/Education'
 import Projects from './pages/Projects'
 import Stack from './pages/Stack'
-// import Footer from './Footer'
+import Footer from './Footer'
 import { useState, useEffect } from 'react'
 
 export default function App() {
@@ -18,16 +18,13 @@ export default function App() {
     }, [onScroll])
 
     return (
-        <div className='h-screen snap-y snap-mandatory'>
+        <div className='h-screen w-screen'>
             <Header onScroll={onScroll} />
             <Biography />
-            <br />
             <Education />
-            <br />
             <Projects />
-            <br />
             <Stack />
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }

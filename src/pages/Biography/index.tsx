@@ -34,7 +34,7 @@ export default function Biography() {
     return (
         <div className='flex h-screen w-screen flex-col'>
             <img
-                className='fixed left-0 top-0 z-0 h-screen w-screen'
+                className='absolute left-0 top-0 z-0 h-screen w-screen'
                 src={
                     'https://images.unsplash.com/photo-1662473991701-c69c3b6bf6fb?q=80&w=3293&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
                 }
@@ -106,7 +106,7 @@ export default function Biography() {
                 </div>
             </div>
             <img
-                className='fixed bottom-0 right-0 z-10 hidden max-h-full max-w-xl md:block xl:max-h-screen xl:max-w-full'
+                className='absolute bottom-0 right-0 z-10 hidden max-h-full max-w-xl md:block xl:max-h-screen xl:max-w-full'
                 src='https://github.com/th0jensen/individual-portfolio/blob/main/src/assets/thomas_face_upscaled.png?raw=true'
                 alt='my face'
             />

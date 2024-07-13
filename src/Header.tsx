@@ -14,19 +14,43 @@ export default function Header({ onScroll }: HeaderProps) {
 
     return (
         <header
-            className={`navbar fixed z-50 w-full p-4 backdrop-blur-2xl`}
+            className={`navbar fixed z-50 w-screen p-4 backdrop-blur-2xl`}
             style={{
                 boxShadow:
                     'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px',
             }}
         >
-            <div className='navbar-start flex w-full items-center justify-between xl:w-auto'>
+            <div
+                className={`relative flex w-full basis-full items-center ${menuOpen ? 'hidden' : 'block'} justify-between px-5 md:block xl:w-auto`}
+            >
                 <Link to={'/#'} className='btn btn-ghost link-primary text-xl'>
                     {onScroll ? 'back to top' : 'thomas jensen'}
                 </Link>
             </div>
+            <nav
+                className={`relative flex w-full basis-full justify-start gap-5 md:justify-end xl:flex ${menuOpen ? 'flex' : 'hidden'} flex-row px-5`}
+            >
+                <Link
+                    to={'#edu'}
+                    className='btn btn-ghost link-primary text-xl'
+                >
+                    edu
+                </Link>
+                <Link
+                    to={'#proj'}
+                    className='btn btn-ghost link-primary text-xl'
+                >
+                    proj
+                </Link>
+                <Link
+                    to={'#tech'}
+                    className='btn btn-ghost link-primary text-xl'
+                >
+                    tech
+                </Link>
+            </nav>
             <button
-                className='btn btn-ghost absolute right-0 xl:hidden'
+                className='btn btn-ghost relative mx-5 xl:hidden'
                 onClick={toggleMenu}
             >
                 <svg
@@ -48,28 +72,6 @@ export default function Header({ onScroll }: HeaderProps) {
                     />
                 </svg>
             </button>
-            <nav
-                className={`absolute right-14 gap-5 xl:flex ${menuOpen ? 'block' : 'hidden'} flex-col xl:flex-row`}
-            >
-                <Link
-                    to={'#edu'}
-                    className='btn btn-ghost link-primary text-xl'
-                >
-                    edu
-                </Link>
-                <Link
-                    to={'#proj'}
-                    className='btn btn-ghost link-primary text-xl'
-                >
-                    proj
-                </Link>
-                <Link
-                    to={'#tech'}
-                    className='btn btn-ghost link-primary text-xl'
-                >
-                    tech
-                </Link>
-            </nav>
         </header>
     )
 }

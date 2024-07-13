@@ -17,6 +17,7 @@ import {
     SiTailwindcss,
     SiTypescript,
 } from 'react-icons/si'
+import { Tooltip as ReactTooltip } from 'react-tooltip'
 
 export default function TechListItem(props: { lang: string }) {
     let Icon: IconType = AiOutlineExclamation
@@ -64,6 +65,15 @@ export default function TechListItem(props: { lang: string }) {
     }
 
     return (
-        <Icon className='text-primary m-0 size-12 p-0 transition ease-in-out hover:scale-125' />
+        <div>
+            <a data-tooltip-id={props.lang} data-tooltip-content={props.lang}>
+                <Icon className='text-primary m-0 size-12 p-0 transition ease-in-out hover:scale-125' />
+            </a>
+            <ReactTooltip
+                id={props.lang}
+                place='bottom'
+                style={{ fontSize: '1rem' }}
+            />
+        </div>
     )
 }

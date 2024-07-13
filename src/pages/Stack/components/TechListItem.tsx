@@ -72,7 +72,12 @@ export default function TechListItem(props: { lang: string }) {
             <ReactTooltip
                 id={props.lang}
                 place='bottom'
-                style={{ fontSize: '1rem' }}
+                style={{
+                    fontSize: '1rem',
+                    marginTop: '0.5rem',
+                    background: 'rgba(0,0,0,0)',
+                    backdropFilter: 'blur(40px)',
+                }}
             />
         </div>
     )

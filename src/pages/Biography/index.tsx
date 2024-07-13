@@ -31,13 +31,14 @@ export default function Biography() {
         return age.toString()
     }
 
+    const background_url =
+        'https://images.unsplash.com/photo-1659194507091-83f10f748133?q=80&w=3264&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+
     return (
         <div className='flex h-screen w-screen flex-col'>
             <img
                 className='absolute left-0 top-0 z-0 h-screen w-screen'
-                src={
-                    'https://images.unsplash.com/photo-1662473991701-c69c3b6bf6fb?q=80&w=3293&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-                }
+                src={background_url}
             />
             <div
                 id='about-me'
@@ -45,10 +46,10 @@ export default function Biography() {
             >
                 <div
                     className='z-20 flex max-w-xl flex-col gap-10 rounded-2xl p-10 backdrop-blur-2xl'
-                    style={{
-                        boxShadow:
-                            'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px',
-                    }}
+                    // style={{
+                    //     boxShadow:
+                    //         'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px',
+                    // }}
                 >
                     <TypeAnimation
                         sequence={sequence}
@@ -81,10 +82,10 @@ export default function Biography() {
                 </div>
                 <div
                     className='col z-20 flex max-w-xl flex-col gap-5 rounded-2xl p-10 backdrop-blur-2xl'
-                    style={{
-                        boxShadow:
-                            'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px',
-                    }}
+                    // style={{
+                    //     boxShadow:
+                    //         'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px',
+                    // }}
                 >
                     <h1 className='flex-row text-4xl font-bold'>socials</h1>
                     <div className='flex gap-5'>

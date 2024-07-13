@@ -37,7 +37,7 @@ export default function Biography() {
     return (
         <div
             id='about-me'
-            className='flex min-h-screen w-screen flex-col'
+            className='flex min-h-screen w-screen flex-col py-16 md:py-0'
             style={{
                 backgroundImage: `url(${background_url})`,
                 backgroundPosition: 'center',

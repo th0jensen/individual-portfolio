@@ -4,6 +4,7 @@ import App from './App.tsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './index.css'
 import ErrorPage from './ErrorPage.tsx'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
@@ -12,6 +13,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
                 <Route path='/' element={<App />} />
                 <Route path='*' element={<ErrorPage />} />
             </Routes>
+            <SpeedInsights />
         </Router>
     </React.StrictMode>
 )

@@ -8,18 +8,27 @@ export type Data = {
         [key: string]: string[]
     }
     education: School[]
+    experience: Work[]
     projects: Project[]
 }
 
 export type School = {
-    title?: string
     time: {
         [key in 'from' | 'to']: string
     }
     school: string
     course: string
-    description?: string
-    classes?: string[]
+    classes: string[]
+}
+
+export type Work = {
+    title: string
+    time: {
+        [key in 'from' | 'to']: string
+    }
+    employer: string
+    location: string
+    description: string
 }
 
 export type Project = {
@@ -77,17 +86,6 @@ export const portfolioData: Data = {
             ],
         },
         {
-            title: 'Software Developer',
-            time: {
-                from: 'Jun 2022',
-                to: 'Oct 2023',
-            },
-            school: 'Redfruit Media LLC',
-            course: 'Austin, TX - Remote',
-            description:
-                'Primarily worked on developing the appleosophy app for iOS and iPad, released in December 2022',
-        },
-        {
             time: {
                 from: 'Aug 2020',
                 to: 'Jan 2022',
@@ -102,6 +100,19 @@ export const portfolioData: Data = {
                 'Norwegian HL',
                 'English SL',
             ],
+        },
+    ],
+    experience: [
+        {
+            title: 'Software Developer',
+            time: {
+                from: 'Jun 2022',
+                to: 'Oct 2023',
+            },
+            employer: 'Redfruit Media LLC',
+            location: 'Austin, TX - Remote',
+            description:
+                'Primarily worked on developing the appleosophy app for iOS and iPad, released in December 2022',
         },
     ],
     projects: [

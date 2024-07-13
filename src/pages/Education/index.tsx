@@ -1,4 +1,5 @@
-import EducationList from './components/EducationList'
+import ExperienceList from './components/ExperienceList'
+import { portfolioData as data } from '../../data'
 
 export default function Education() {
     const background_url =
@@ -15,14 +16,16 @@ export default function Education() {
                 }}
             >
                 <div
-                    className='z-20 flex flex-col gap-10 rounded-2xl p-10 backdrop-blur-2xl'
+                    className='z-20 flex flex-col items-start gap-10 rounded-2xl p-10 backdrop-blur-2xl'
                     style={{
                         boxShadow:
                             'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px',
                     }}
                 >
                     <h1 className='text-4xl font-bold'>experience</h1>
-                    <EducationList />
+                    <ExperienceList data={data.experience} />
+                    <h1 className='text-4xl font-bold'>education</h1>
+                    <ExperienceList data={data.education} />
                 </div>
             </div>
         </div>

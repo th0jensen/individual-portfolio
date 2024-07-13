@@ -3,7 +3,7 @@ import ProjectListItem from './ProjectListItem'
 
 export default function ProjectList() {
     return (
-        <div className='flex flex-wrap justify-center gap-5'>
+        <div className='flex flex-wrap justify-center'>
             {data.projects.map((project, index) => (
                 <ProjectListItem key={index} project={project} />
             ))}

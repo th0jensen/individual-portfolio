@@ -16,7 +16,7 @@ export default function Education() {
                 }}
             >
                 <div
-                    className='z-20 flex flex-col items-start gap-10 rounded-2xl p-10 backdrop-blur-2xl'
+                    className='z-20 flex flex-col items-start rounded-2xl p-10 backdrop-blur-2xl'
                     style={{
                         boxShadow:
                             'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px',

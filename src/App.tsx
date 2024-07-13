@@ -18,7 +18,7 @@ export default function App() {
     }, [onScroll])
 
     return (
-        <div className='h-screen w-screen'>
+        <div>
             <Header onScroll={onScroll} />
             <Biography />
             <Education />

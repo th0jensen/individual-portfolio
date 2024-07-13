@@ -35,22 +35,17 @@ export default function Biography() {
         'https://images.unsplash.com/photo-1659194507091-83f10f748133?q=80&w=3264&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 
     return (
-        <div className='flex h-screen w-screen flex-col'>
-            <img
-                className='absolute left-0 top-0 z-0 h-screen w-screen'
-                src={background_url}
-            />
-            <div
-                id='about-me'
-                className='text-primary container z-10 flex h-screen max-w-xl flex-col justify-center gap-10 px-10 pt-24 text-3xl font-bold'
-            >
-                <div
-                    className='z-20 flex max-w-xl flex-col gap-10 rounded-2xl p-10 backdrop-blur-2xl'
-                    // style={{
-                    //     boxShadow:
-                    //         'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px',
-                    // }}
-                >
+        <div
+            id='about-me'
+            className='flex min-h-screen w-screen flex-col'
+            style={{
+                backgroundImage: `url(${background_url})`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+            }}
+        >
+            <div className='text-primary flex min-h-screen w-full flex-col justify-center gap-5 p-10 text-3xl font-bold'>
+                <div className='z-20 flex max-w-xl flex-col gap-10 rounded-2xl p-10 backdrop-blur-2xl'>
                     <TypeAnimation
                         sequence={sequence}
                         wrapper='h1'
@@ -80,13 +75,7 @@ export default function Biography() {
                         />
                     </div>
                 </div>
-                <div
-                    className='col z-20 flex max-w-xl flex-col gap-5 rounded-2xl p-10 backdrop-blur-2xl'
-                    // style={{
-                    //     boxShadow:
-                    //         'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px',
-                    // }}
-                >
+                <div className='col z-20 flex max-w-xl flex-col gap-5 rounded-2xl p-10 backdrop-blur-2xl'>
                     <h1 className='flex-row text-4xl font-bold'>socials</h1>
                     <div className='flex gap-5'>
                         <SocialButton

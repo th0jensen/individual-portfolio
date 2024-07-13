@@ -75,8 +75,7 @@ export default function TechListItem(props: { lang: string }) {
                 style={{
                     fontSize: '1rem',
                     marginTop: '0.5rem',
-                    background: 'rgba(0,0,0,0)',
-                    backdropFilter: 'blur(40px)',
+                    background: 'rgba(44,44,44,1)',
                 }}
             />
         </div>

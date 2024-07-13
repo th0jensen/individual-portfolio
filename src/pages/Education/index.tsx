@@ -5,16 +5,15 @@ export default function Education() {
         'https://images.unsplash.com/photo-1713023811360-d3203bc92c77?q=80&w=3264&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 
     return (
-        <div className='flex h-screen w-screen flex-col'>
+        <div id='edu' className='flex min-h-screen w-screen flex-col'>
             <div
-                id='edu'
-                className='text-primary bg-base-100 z-20 flex h-full w-full flex-col justify-center p-10 text-3xl font-bold'
+                className='text-primary bg-base-100 flex min-h-screen w-full flex-col justify-center p-10 text-3xl font-bold'
+                style={{
+                    backgroundImage: `url(${background_url})`,
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                }}
             >
-                <img
-                    className='absolute left-0 z-0 h-screen w-screen'
-                    src={background_url}
-                    alt=''
-                />
                 <div
                     className='z-20 flex flex-col gap-10 rounded-2xl p-10 backdrop-blur-2xl'
                     style={{

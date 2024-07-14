@@ -1,78 +1,84 @@
-import { IconType } from 'react-icons'
-import { AiOutlineExclamation } from 'react-icons/ai'
-import { BiLogoGoLang } from 'react-icons/bi'
 import {
-    DiLinux,
-    DiNodejs,
-    DiPostgresql,
-    DiReact,
-    DiRust,
-    DiSwift,
-} from 'react-icons/di'
-import {
-    SiCss3,
-    SiExpress,
-    SiHtml5,
-    SiJavascript,
-    SiTailwindcss,
-    SiTypescript,
-} from 'react-icons/si'
+    Css3Original,
+    ExpressOriginal,
+    GoOriginal,
+    Html5Original,
+    JavascriptOriginal,
+    LinuxOriginal,
+    LuaPlain,
+    NodejsOriginalWordmark,
+    PostgresqlOriginal,
+    ReactOriginal,
+    RustOriginal,
+    SwiftOriginal,
+    TailwindcssOriginal,
+    TypescriptOriginal,
+} from 'devicons-react'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
 
 export default function TechListItem(props: { lang: string }) {
-    let Icon: IconType = AiOutlineExclamation
+    let Icon = LuaPlain
 
     switch (props.lang) {
         case 'Typescript':
-            Icon = SiTypescript
+            Icon = TypescriptOriginal
             break
         case 'Javascript':
-            Icon = SiJavascript
+            Icon = JavascriptOriginal
             break
         case 'HTML':
-            Icon = SiHtml5
+            Icon = Html5Original
             break
         case 'CSS':
-            Icon = SiCss3
+            Icon = Css3Original
             break
         case 'Go':
-            Icon = BiLogoGoLang
+            Icon = GoOriginal
             break
         case 'Swift':
-            Icon = DiSwift
+            Icon = SwiftOriginal
             break
         case 'Rust':
-            Icon = DiRust
+            Icon = RustOriginal
             break
         case 'React.js':
-            Icon = DiReact
+            Icon = ReactOriginal
             break
         case 'Express':
-            Icon = SiExpress
+            Icon = ExpressOriginal
             break
         case 'Node.js':
-            Icon = DiNodejs
+            Icon = NodejsOriginalWordmark
             break
         case 'PostgreSQL':
-            Icon = DiPostgresql
+            Icon = PostgresqlOriginal
             break
         case 'TailwindCSS':
-            Icon = SiTailwindcss
+            Icon = TailwindcssOriginal
             break
         case 'Linux':
-            Icon = DiLinux
+            Icon = LinuxOriginal
             break
     }
 
     return (
         <div>
             <a data-tooltip-id={props.lang} data-tooltip-content={props.lang}>
-                <Icon className='text-primary m-0 size-12 p-0 transition ease-in-out hover:scale-125' />
+                {props.lang === 'Express' || props.lang === 'Rust' ? (
+                    <Icon
+                        color='white'
+                        size='50'
+                        style={{ filter: 'invert(0.75)' }}
+                    />
+                ) : (
+                    <Icon size='50' />
+                )}
             </a>
             <ReactTooltip
                 id={props.lang}
                 place='bottom'
                 style={{
+                    zIndex: '50',
                     fontSize: '1rem',
                     marginTop: '0.5rem',
                     background: 'rgba(44,44,44,1)',

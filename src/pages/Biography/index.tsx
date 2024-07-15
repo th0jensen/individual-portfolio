@@ -97,7 +97,7 @@ export default function Biography() {
             </div>
             <img
                 className='absolute bottom-0 right-0 z-10 hidden max-h-full max-w-xl md:block xl:max-h-screen xl:max-w-full'
-                src='/public/thomas_face_upscaled.png'
+                src='public/thomas_face_upscaled.png'
                 alt='my face'
             />
         </div>

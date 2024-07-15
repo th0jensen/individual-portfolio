@@ -12,8 +12,10 @@ export default function ExperienceListItem(props: { data: School | Work }) {
                 </p>
                 <ul className='flex w-fit flex-wrap gap-2'>
                     {'classes' in data ? (
-                        data.classes.map((item) => (
-                            <li className='basis-1/3 text-nowrap'>{item}</li>
+                        data.classes.map((item, index) => (
+                            <li key={index} className='basis-1/3 text-nowrap'>
+                                {item}
+                            </li>
                         ))
                     ) : (
                         <li>{data.description.toString()}</li>
